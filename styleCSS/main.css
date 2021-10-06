@@ -328,5 +328,12 @@ main .section-title p {
   width: 300px;
   font-size: 15px;
 }
+main .basic_tips .basic_items {
+  margin: 30px 0;
+}
+main .basic_tips .basic_items .item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
 
 /*# sourceMappingURL=main.css.map */
