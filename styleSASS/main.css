@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+
+/* FLEXBOX MIXINS */
+/* CSS GRID MIXINS */
+.btn {
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+  color: #008562;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn.primary {
+  background-color: #008562;
+  color: white;
+}
+
+.btn.secondary {
+  background-color: black;
+  color: white;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header .menu-toggle {
+  position: fixed;
+  top: 50px;
+  right: 0px;
+  padding: 0 10px;
+  z-index: 99;
+}
+
+header .menu-toggle .btn {
+  padding: 10px 13px;
+}
+
+header .slideshow {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+header .slideshow-nav {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  z-index: 99;
+  padding-right: 10px;
+}
+
+header .slideshow-nav .btn {
+  padding: 15px 20px;
+}
+
+header .slideshow-info {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  max-width: 600px;
+  padding-right: 10px;
+  color: white;
+  text-align: right;
+  font-size: 28px;
+  z-index: 3;
+}
+
+header .slideshow-info p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+header .slideshow .slide-1 {
+  background-image: url("./backgrounds/background1.jpg");
+}
+
+header .slideshow .slide-2 {
+  background-image: url("./backgrounds/background2.jpg");
+}
+
+header .slideshow .slide-3 {
+  background-image: url("./backgrounds/background3.jpg");
+}
+
+header .slideshow .slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+}
+
+header .slideshow .slides.active {
+  position: relative;
+  visibility: visible;
+}
+/*# sourceMappingURL=main.css.map */

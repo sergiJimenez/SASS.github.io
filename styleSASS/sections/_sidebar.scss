@@ -1,0 +1,106 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  @include flex(space-between, center, column);
+  width: 300px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(4px) saturate(200%);
+  -webkit-backdrop-filter: blur(4px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.8);
+
+  @include lg {
+    width: 260px;
+  }
+
+  &.open {
+    width: 0px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .logo {
+    align-self: stretch;
+    padding: 20px;
+    background-color: $sea;
+
+    h1 {
+      padding: 25px;
+      border: 1px solid white;
+      color: white;
+      font-size: 26px;
+      font-weight: 100;
+      text-align: center;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &-menu {
+    padding: 40px;
+
+    li {
+      margin: 10px 0;
+      padding: 10px 0;
+      width: 180px;
+      @include flex(flex-start, center);
+
+      a {
+        color: white;
+
+        &:hover {
+          color: $sea;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      &:hover .dot {
+        border: 2px solid $sea;
+        background-color: $sea;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:before {
+        display: inline-block;
+        content: "";
+        border-top: 1px solid $sea;
+        width: 0;
+        margin-right: 10px;
+        transition: all 0.8s ease-in-out;
+        transform: translate(10px, 0);
+      }
+
+      &.active::before {
+        width: 40px;
+      }
+    }
+  }
+
+  &-social-links {
+    padding: 20px;
+    text-align: center;
+    white-space: nowrap;
+
+    i {
+      margin: 0 10px;
+      transition: all 0, 4s ease;
+
+      &:hover {
+        color: $sea;
+        transform: scale(1.5);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}

@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+
+/* FLEXBOX MIXINS */
+/* CSS GRID MIXINS */
+.btn {
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+  color: #008562;
+  font-size: 20px;
+  text-align: center;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn.primary {
+  background-color: #008562;
+  color: white;
+}
+.btn.secondary {
+  background-color: black;
+  color: white;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 0 10px;
+}
+.dot:hover {
+  cursor: pointer;
+  background-color: #008562;
+}
+.dot.active {
+  background-color: white;
+}
+
+@keyframes zoomin {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+header .menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 0 10px;
+  z-index: 99;
+}
+header .menu-toggle .btn {
+  padding: 10px 13px;
+}
+header .menu-toggle .btn:hover {
+  background-color: white;
+  color: #008562;
+  transition: all 0.3s ease-in-out;
+}
+header .slideshow {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  animation: zoomin 13s ease-in-out infinite alternate;
+}
+header .slideshow-nav {
+  position: absolute;
+  bottom: 10px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  padding-right: 10px;
+}
+header .slideshow-nav .btn {
+  padding: 15px 20px;
+}
+header .slideshow-nav .btn:hover {
+  background-color: white;
+  color: #008562;
+  transition: all 0.3s ease-in-out;
+}
+header .slideshow-info {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 600px;
+  padding-right: 10px;
+  color: black;
+  text-align: right;
+  font-size: 28px;
+  z-index: 3;
+}
+header .slideshow-info p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+header .slideshow .slide-1 {
+  background-image: url("../media/backgrounds/background1.jpg");
+}
+header .slideshow .slide-2 {
+  background-image: url("../media/backgrounds/background2.jpg");
+}
+header .slideshow .slide-3 {
+  background-image: url("../media/backgrounds/background3.jpg");
+}
+header .slideshow .slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: opacity(0.7);
+  transition: all 2.1s ease-in-out;
+}
+header .slideshow .slides.active {
+  position: relative;
+  visibility: visible;
+  filter: opacity(1);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(4px) saturate(200%);
+  -webkit-backdrop-filter: blur(4px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.8);
+}
+@media (min-width: 992px) {
+  .sidebar {
+    width: 260px;
+  }
+}
+.sidebar.open {
+  width: 0px;
+}
+.sidebar::-webkit-scrollbar {
+  width: 0;
+}
+.sidebar .logo {
+  align-self: stretch;
+  padding: 20px;
+  background-color: #008562;
+}
+.sidebar .logo h1 {
+  padding: 25px;
+  border: 1px solid white;
+  color: white;
+  font-size: 26px;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar-menu {
+  padding: 40px;
+}
+.sidebar-menu li {
+  margin: 10px 0;
+  padding: 10px 0;
+  width: 180px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sidebar-menu li a {
+  color: white;
+}
+.sidebar-menu li a:hover {
+  color: #008562;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar-menu li:hover .dot {
+  border: 2px solid #008562;
+  background-color: #008562;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar-menu li:before {
+  display: inline-block;
+  content: "";
+  border-top: 1px solid #008562;
+  width: 0;
+  margin-right: 10px;
+  transition: all 0.8s ease-in-out;
+  transform: translate(10px, 0);
+}
+.sidebar-menu li.active::before {
+  width: 40px;
+}
+.sidebar-social-links {
+  padding: 20px;
+  text-align: center;
+  white-space: nowrap;
+}
+.sidebar-social-links i {
+  margin: 0 10px;
+  transition: all 0, 4s ease;
+}
+.sidebar-social-links i:hover {
+  color: #008562;
+  transform: scale(1.5);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 992px) {
+  main {
+    margin-left: 300px;
+    padding-top: 100px;
+  }
+}
+main section {
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  main section {
+    padding-top: 30px 50px;
+  }
+}
+@media (min-width: 992px) {
+  main section {
+    padding-top: 30px 100px;
+  }
+}
+main .section-tittle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  line-height: 1.5;
+}
+main .section-tittle h1 {
+  margin-right: 100px;
+  font-size: 30px;
+}
+main .section-tittle h1 span {
+  display: block;
+  color: #008562;
+}
+main .section-tittle p {
+  width: 300px;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=main.css.map */

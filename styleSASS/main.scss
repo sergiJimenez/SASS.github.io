@@ -1,0 +1,46 @@
+@import "_variables";
+@import "_reset";
+@import "_mixins";
+@import "_utilities";
+@import "_animations";
+
+@import "./sections/header";
+@import "./sections/sidebar";
+
+main {
+  @include lg {
+    margin-left: 300px;
+    padding-top: $container-padding-lg;
+  }
+  section {
+    padding: $container-padding;
+    @include md {
+      padding-top: 30px $container-padding-md;
+    }
+    @include lg {
+      padding-top: 30px $container-padding-lg;
+    }
+  }
+
+  .section-tittle {
+    @include flex(flex-start, center);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    line-height: 1.5;
+
+    h1 {
+      margin-right: 100px;
+      font-size: 30px;
+
+      span {
+        display: block;
+        color: $sea;
+      }
+    }
+
+    p {
+      width: 300px;
+      font-size: 15px;
+    }
+  }
+}

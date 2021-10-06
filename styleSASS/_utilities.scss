@@ -1,0 +1,40 @@
+.btn {
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+  color: $sea;
+  font-size: 20px;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.primary {
+    background-color: $sea;
+    color: white;
+  }
+
+  &.secondary {
+    background-color: black;
+    color: white;
+  }
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 0 10px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $sea;
+  }
+
+  &.active {
+    background-color: white;
+  }
+}
