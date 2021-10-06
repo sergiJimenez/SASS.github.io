@@ -22,7 +22,7 @@ main {
     }
   }
 
-  .section-tittle {
+  .section-title {
     @include flex(flex-start, center);
     margin-bottom: 30px;
     padding-bottom: 20px;
@@ -43,4 +43,6 @@ main {
       font-size: 15px;
     }
   }
+
+  @import "./sections/_basic_tips";
 }
