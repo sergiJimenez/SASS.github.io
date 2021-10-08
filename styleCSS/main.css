@@ -278,6 +278,7 @@ header .slideshow .slides.active {
 }
 .sidebar-social-links i {
   margin: 0 10px;
+  color: white;
   transition: all 0, 4s ease;
 }
 .sidebar-social-links i:hover {
