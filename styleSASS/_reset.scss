@@ -27,10 +27,12 @@ a {
 }
 
 img {
-  width: 100px;
-  height: auto;
+  width: 306px;
+  height: 360px;
+  object-fit: cover;
 }
 
+input,
 textarea {
   border: none;
   outline: none;

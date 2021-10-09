@@ -30,6 +30,11 @@
     border-radius: 100%;
     border: solid rgba(255, 255, 255, 0.125);
   }
+
+  &.try {
+    background-color: $sea;
+    color: white;
+  }
 }
 
 .dot {

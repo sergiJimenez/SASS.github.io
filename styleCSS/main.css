@@ -26,10 +26,12 @@ a {
 }
 
 img {
-  width: 100px;
-  height: auto;
+  width: 306px;
+  height: 360px;
+  object-fit: cover;
 }
 
+input,
 textarea {
   border: none;
   outline: none;
@@ -66,6 +68,10 @@ textarea {
   background-color: rgba(17, 25, 40, 0);
   border-radius: 100%;
   border: solid rgba(255, 255, 255, 0.125);
+}
+.btn.try {
+  background-color: #008562;
+  color: white;
 }
 
 .dot {
@@ -353,6 +359,14 @@ main .basic_tips .basic_items .item {
 main .basic_tips .basic_items .item .image {
   position: relative;
   overflow: hidden;
+}
+main .basic_tips .basic_items .item .image .btn {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  margin-bottom: -35px;
+  transition: margin 0.4s ease;
 }
 main .basic_tips h1 {
   margin: 20px 0 10px;
