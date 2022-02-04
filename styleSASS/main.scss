@@ -13,12 +13,12 @@ main {
     padding-top: $container-padding-lg;
   }
   section {
-    padding: $container-padding;
+    padding: 300px $container-padding;
     @include md {
-      padding-top: 30px $container-padding-md;
+      padding-top: 300px $container-padding-md;
     }
     @include lg {
-      padding-top: 30px $container-padding-lg;
+      padding-top: 300px $container-padding-lg;
     }
   }
 
@@ -45,4 +45,6 @@ main {
   }
 
   @import "./sections/_basic_tips";
+  //@import "./sections/_if_we_take_off";
+  //@import "./sections/_about_us";
 }
