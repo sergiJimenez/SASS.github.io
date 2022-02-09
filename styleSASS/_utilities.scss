@@ -1,9 +1,9 @@
 .btn {
   display: inline-block;
   padding: 10px;
-  background-color: white;
+  background-color: #ffffff;
   color: $sea;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
 
   &:hover {
@@ -30,11 +30,6 @@
     border-radius: 100%;
     border: solid rgba(255, 255, 255, 0.125);
   }
-
-  &.try {
-    background-color: $sea;
-    color: white;
-  }
 }
 
 .dot {
@@ -42,7 +37,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid #ffffff;
   margin: 0 10px;
 
   &:hover {
@@ -51,6 +46,6 @@
   }
 
   &.active {
-    background-color: white;
+    background-color: #ffffff;
   }
 }

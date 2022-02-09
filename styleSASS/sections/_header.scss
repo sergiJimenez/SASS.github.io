@@ -5,19 +5,21 @@ header {
 
   .menu-toggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 50px;
+    right: 0px;
     padding: 0 $container-padding;
     z-index: 99;
 
+    @include md {
+      padding-right: $container-padding-md;
+    }
+
+    @include lg {
+      display: none;
+    }
+
     .btn {
       padding: 10px 13px;
-
-      &:hover {
-        background-color: white;
-        color: $sea;
-        transition: all 0.3s ease-in-out;
-      }
     }
   }
 
@@ -31,21 +33,29 @@ header {
     &-nav {
       position: absolute;
       bottom: $container-padding;
-      bottom: 20px;
-      right: 20px;
+      right: 0;
       z-index: 99;
       padding-right: $container-padding;
+
+      @include md {
+        padding-right: $container-padding-md;
+      }
+
+      @include lg {
+        top: $container-padding-lg;
+        padding-right: $container-padding-lg;
+      }
 
       .btn {
         padding: 15px 20px;
 
         &:hover {
-          background-color: white;
+          background-color: #ffffff;
           color: $sea;
-          transition: all 0.3s ease-in-out;
         }
       }
     }
+
     &-info {
       position: absolute;
       right: 0;
@@ -53,10 +63,18 @@ header {
       transform: translateY(-50%);
       max-width: 600px;
       padding-right: $container-padding;
-      color: black;
+      color: #ffffff;
       text-align: right;
       font-size: 28px;
       z-index: 3;
+
+      @include md {
+        padding-right: $container-padding-md;
+      }
+
+      @include lg {
+        padding-right: $container-padding-lg;
+      }
 
       p {
         font-size: 18px;
@@ -65,15 +83,15 @@ header {
     }
 
     .slide-1 {
-      background-image: url("../media/backgrounds/background1.jpg");
+      background-image: url("./images/slide_1.jpg");
     }
 
     .slide-2 {
-      background-image: url("../media/backgrounds/background2.jpg");
+      background-image: url("./images/slide_2.jpg");
     }
 
     .slide-3 {
-      background-image: url("../media/backgrounds/background3.jpg");
+      background-image: url("./images/slide_3.jpg");
     }
 
     .slides {

@@ -4,7 +4,7 @@
   left: 0;
   z-index: 99;
   @include flex(space-between, center, column);
-  width: 300px;
+  width: 0;
   height: 100vh;
   background-color: black;
   color: white;
@@ -16,11 +16,11 @@
   background-color: rgba(17, 25, 40, 0.8);
 
   @include lg {
-    width: 260px;
+    width: 300px;
   }
 
   &.open {
-    width: 0px;
+    width: 260px;
   }
 
   &::-webkit-scrollbar {
@@ -41,6 +41,9 @@
       text-align: center;
       text-transform: uppercase;
       transition: all 0.3s ease-in-out;
+      span {
+        font-weight: bold;
+      }
     }
   }
 
@@ -94,7 +97,7 @@
     i {
       margin: 0 10px;
       color: white;
-      transition: all 0, 4s ease;
+      transition: all 0.4s ease;
 
       &:hover {
         color: $sea;

@@ -1,8 +1,8 @@
-@import "_variables";
-@import "_reset";
-@import "_mixins";
-@import "_utilities";
-@import "_animations";
+@import "./variables";
+@import "./reset";
+@import "./mixins";
+@import "./utilities";
+@import "./animations";
 
 @import "./sections/header";
 @import "./sections/sidebar";
@@ -12,13 +12,16 @@ main {
     margin-left: 300px;
     padding-top: $container-padding-lg;
   }
+
   section {
-    padding: 300px $container-padding;
+    padding: $container-padding;
+
     @include md {
-      padding-top: 300px $container-padding-md;
+      padding: 30px $container-padding-md;
     }
+
     @include lg {
-      padding-top: 300px $container-padding-lg;
+      padding: 30px $container-padding-lg;
     }
   }
 
@@ -44,7 +47,11 @@ main {
     }
   }
 
-  @import "./sections/_basic_tips";
-  //@import "./sections/_if_we_take_off";
-  //@import "./sections/_about_us";
+  @import "./sections/featured-places";
+  @import "./sections/recent-projects";
+  @import "./sections/company-presentation";
+  @import "./sections/blog-entries";
+  @import "./sections/google-maps";
+  @import "./sections/contact-sentra";
+  @import "./sections/footer";
 }
